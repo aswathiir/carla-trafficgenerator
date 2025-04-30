@@ -1,0 +1,15 @@
+# Ignore CARLA binary and intermediate build files
+CarlaUE4/Binaries/
+CarlaUE4/Intermediate/
+CarlaUE4/Saved/
+Engine/Binaries/
+Engine/Intermediate/
+Engine/Saved/
+PythonAPI/carla/carla_env/
+*.exe
+*.dll
+*.pdb
+*.so
+*.log
+*.vs
+*.vcxproj*

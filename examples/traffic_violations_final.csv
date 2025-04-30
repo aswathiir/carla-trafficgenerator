@@ -1,0 +1,1 @@
+timestamp,vehicle_id,vehicle_type,violation_type,speed_kmh,location_x,location_y,distance_to_light,light_state,lane_type

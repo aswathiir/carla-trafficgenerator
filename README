@@ -1,0 +1,240 @@
+# CARLA Traffic Violation Detection & Analytics System
+
+![CARLA Simulation Dashboard](https://carla.org/img/hero.jpg)
+
+## Table of Contents
+- [System Overview](#system-overview)
+- [Key Features](#key-features)
+- [Technical Architecture](#technical-architecture)
+- [Installation Guide](#installation-guide)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Firebase Integration](#firebase-integration)
+- [Data Analytics](#data-analytics)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+
+## System Overview
+
+This advanced traffic monitoring system combines CARLA's realistic vehicle simulation with real-time violation detection and cloud analytics. The script generates both labelled and unlabelled dataset. The script is available in the location `cd ./pythonapi/examples`. Rather than generating a scenario and wasting energy integrating it run this script file to generate violations in your Carla simulation. The solution:
+
+1. Simulates complex urban traffic scenarios with 20+ autonomous vehicles
+2. Detects 8 types of traffic violations using integrated sensors
+3. Logs comprehensive telemetry data to CSV files
+4. Streams violation events to Firebase for real-time monitoring
+5. Prepares structured datasets for machine learning applications
+
+## Key Features
+
+### Core Detection Capabilities
+- **Speeding** monitoring with configurable speed limits
+- **Traffic signal violations** (red light running)
+- **Wrong-way driving** detection
+- **Illegal overtaking** identification
+- **Collision detection** with severity classification
+- **Lane discipline violations**
+
+### Data Pipeline
+- Real-time CSV logging with timestamped events
+- Vehicle telemetry capture (speed, position, acceleration)
+- Sensor fusion (LiDAR, cameras, IMU)
+- Firebase Cloud Firestore integration
+- Automated dataset preparation for ML
+
+### Simulation Control
+- Dynamic vehicle spawning/destruction
+- Scenario Runner integration
+- Custom traffic behavior scripting
+- Multi-town support (Town01-Town10)
+
+## Technical Architecture
+
+```mermaid
+graph TD
+    A[CARLA Simulator] --> B[Python API]
+    B --> C[Violation Detection Engine]
+    C --> D[Local CSV Storage]
+    C --> E[Firebase Cloud]
+    D --> F[ML Dataset Preparation]
+    E --> G[Real-time Dashboard]
+```
+
+## Installation Guide
+
+### Prerequisites
+- Windows 10/11 (64-bit)
+- NVIDIA GPU (6GB+ VRAM recommended)
+- Python 3.7.9
+- CARLA 0.9.15 WindowsNoEditor
+- DirectX 11 Runtime
+
+### Step-by-Step Setup
+
+1. **Install CARLA**
+   ```powershell
+   # Download and extract CARLA
+   mkdir C:\CARLA
+   Expand-Archive CARLA_0.9.15.zip -DestinationPath C:\CARLA
+   ```
+
+2. **Configure Python Environment**
+   ```cmd
+   python -m venv carla_env
+   carla_env\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+3. **Set Environment Paths**
+   ```cmd
+   set PYTHONPATH=%PYTHONPATH%;C:\CARLA\PythonAPI\carla
+   set PYTHONPATH=%PYTHONPATH%;C:\scenario_runner
+   ```
+
+## Configuration
+
+### Simulation Parameters
+Edit `config.ini` to customize:
+```ini
+[simulation]
+town = Town01
+vehicles = 20
+duration = 30  # minutes
+quality = Low
+
+[violations]
+speed_limit = 60  # km/h
+min_collision_force = 500  # N
+```
+
+### Sensor Configuration
+Modify `sensors.json` to adjust:
+```json
+{
+  "camera": {
+    "fov": 90,
+    "resolution": "1280x720"
+  },
+  "lidar": {
+    "channels": 32,
+    "range": 5000
+  }
+}
+```
+
+## Usage
+
+### Starting the System
+
+1. **Launch CARLA Server**
+   ```cmd
+   CarlaUE4.exe -dx11 -quality-level=Low -world-port=2000
+   ```
+
+2. **Run Detection System**
+   ```cmd
+   python traffic_detection.py --config config.ini
+   ```
+
+3. **Monitor Output**
+   ```
+   🚨 [14:40:51] Vehicle #5486081b - Illegal Overtaking (72.4 km/h)
+   📊 [14:40:51] Event logged to Firebase (collision_path/violations)
+   ```
+
+### Command Reference
+| Command | Description |
+|---------|-------------|
+| `--town` | Select CARLA map (Town01-Town10) |
+| `--vehicles` | Number of NPC vehicles (10-50) |
+| `--firebase` | Enable cloud logging (true/false) |
+| `--headless` | Run without rendering |
+
+## Firebase Integration
+
+### Setup
+1. Create Firebase project
+2. Download service account JSON
+3. Place at `config/firebase-creds.json`
+
+### Data Structure
+```javascript
+{
+  "violations": {
+    "vehicleId": "5486081b",
+    "timestamp": "2025-02-16T14:40:51Z",
+    "type": "Illegal_Overtaking",
+    "location": { "x": 124.56, "y": -45.78 },
+    "telemetry": {
+      "speed": 72.4,
+      "acceleration": 2.1
+    }
+  }
+}
+```
+
+### Real-time Dashboard
+Access violations at:
+`https://carla-4f285-default-rtdb.firebaseio.com/`
+
+## Data Analytics
+
+### CSV Structure
+| Column | Type | Description |
+|--------|------|-------------|
+| timestamp | DateTime | Event time (UTC) |
+| vehicle_id | String | CARLA vehicle ID |
+| violation_type | Enum | Violation category |
+| speed | Float | km/h at time of event |
+| location | GeoPoint | X,Y coordinates |
+| sensor_data | JSON | Raw sensor payload |
+
+### Example Analysis
+```python
+import pandas as pd
+
+df = pd.read_csv('violations.csv')
+print(df.groupby('violation_type')['speed'].describe())
+
+# Output:
+#               count   mean    std    min    25%    50%    75%    max
+# violation_type                                                      
+# Illegal_Overtaking   42  68.42  12.31  45.10  59.25  67.80  76.55  89.30
+# Wrong_Way_Driving    18  55.67   9.87  32.45  49.10  56.20  62.15  73.80
+```
+
+## Troubleshooting
+
+### Common Issues
+1. **Python Version Mismatch**
+   ```
+   Error: CARLA requires Python 3.7.x
+   Solution: py -3.7 -m venv carla_env
+   ```
+
+2. **Port Conflicts**
+   ```cmd
+   netstat -ano | findstr 2000
+   taskkill /PID <pid> /F
+   ```
+
+3. **Firebase Connection**
+   ```
+   Error: 403 Permission denied
+   Solution: Regenerate service account JSON
+   ```
+
+## License
+
+MIT License
+
+Copyright (c) 2025 @aswathiir
+
+Permission is hereby granted... [standard MIT license text]
+
+---
+
+**System Requirements**  
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)  
+![Python](https://img.shields.io/badge/Python-3.7.9-green)  
+![CARLA](https://img.shields.io/badge/CARLA-0.9.15-orange)  
+![Firebase](https://img.shields.io/badge/Firebase-9.22.0-yellow)

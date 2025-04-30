@@ -1,0 +1,843 @@
+{
+  "-ON4LFa9LkAF7I5KvUv8": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": 90.32588195800781,
+    "imu": {
+      "accel_x": 4.004459857940674,
+      "accel_y": -0.09200811386108398,
+      "accel_z": 8.627217292785645,
+      "gyro_x": -0.016111014410853386,
+      "gyro_y": -0.0017029307782649994,
+      "gyro_z": -0.017075596377253532
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5228,
+    "location": {
+      "altitude": 0.02558971382677555,
+      "latitude": -0.000661013299776414,
+      "longitude": -0.0009981369650728007
+    },
+    "proximity_alert": true,
+    "speed_kph": 8.09063358173801,
+    "steer": -0.03265293315052986,
+    "throttle": 0.8500000238418579,
+    "timestamp": "2025-04-05 15:17:23",
+    "traffic_light_state": "None",
+    "vehicle_id": "6de7855a",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LGgAIdfA4zbr2Lag": {
+    "brake": 0.699999988079071,
+    "collision_partner": "None",
+    "details": "Vehicle moving opposite to lane direction",
+    "heading": -51.00133514404297,
+    "imu": {
+      "accel_x": 0.596167266368866,
+      "accel_y": -2.4398276805877686,
+      "accel_z": 10.176108360290527,
+      "gyro_x": -0.01028187945485115,
+      "gyro_y": 0.03423166275024414,
+      "gyro_z": -0.35894128680229187
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5592,
+    "location": {
+      "altitude": -0.010568923316895962,
+      "latitude": -0.00014655493467330416,
+      "longitude": -0.00043893648887259585
+    },
+    "proximity_alert": true,
+    "speed_kph": 23.15718279240977,
+    "steer": -0.12056438624858856,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:17:29",
+    "traffic_light_state": "None",
+    "vehicle_id": "78799283",
+    "violation_type": "Wrong Way Driving"
+  },
+  "-ON4LH38oZBFPlakPoPG": {
+    "brake": 1,
+    "collision_partner": "None",
+    "details": "Approaching red light at 15.69 km/h",
+    "heading": 90.71281433105469,
+    "imu": {
+      "accel_x": -1.9439111948013306,
+      "accel_y": -0.0005015134811401367,
+      "accel_z": 9.9071683883667,
+      "gyro_x": 0.00009548850357532501,
+      "gyro_y": 0.021030720323324203,
+      "gyro_z": -0.0009764684364199638
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5812,
+    "location": {
+      "altitude": -0.0053056334145367146,
+      "latitude": 0.00009131137522899735,
+      "longitude": -0.0009892361925242317
+    },
+    "proximity_alert": true,
+    "speed_kph": 15.693752037750363,
+    "steer": -0.0006220098002813756,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:17:30",
+    "traffic_light_state": "Red",
+    "vehicle_id": "8630479c",
+    "violation_type": "Red Light Violation"
+  },
+  "-ON4LH91KBd3d_N4QRYU": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": 80.25325775146484,
+    "imu": {
+      "accel_x": 0.5723321437835693,
+      "accel_y": -0.14392238855361938,
+      "accel_z": 9.804340362548828,
+      "gyro_x": -0.00033439527032896876,
+      "gyro_y": 0.00023031896853353828,
+      "gyro_z": -0.03259621560573578
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5876,
+    "location": {
+      "altitude": -0.003460273612290621,
+      "latitude": -0.0008216471258180036,
+      "longitude": -0.000982262241562099
+    },
+    "proximity_alert": true,
+    "speed_kph": 20.60730089286236,
+    "steer": -0.1288638859987259,
+    "throttle": 0.23726435005664825,
+    "timestamp": "2025-04-05 15:17:30",
+    "traffic_light_state": "None",
+    "vehicle_id": "6de7855a",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LHdW3XNkm_3Slwjk": {
+    "brake": 1,
+    "collision_partner": "None",
+    "details": "Approaching red light at 16.68 km/h",
+    "heading": -179.66375732421875,
+    "imu": {
+      "accel_x": 0.5490624904632568,
+      "accel_y": -0.008244429714977741,
+      "accel_z": 9.793594360351562,
+      "gyro_x": 0.000056943739764392376,
+      "gyro_y": -0.005371419712901115,
+      "gyro_z": 0.00004702435762737878
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5568,
+    "location": {
+      "altitude": 0.010737952776253223,
+      "latitude": -0.0011686135226227634,
+      "longitude": -0.0001791337531633776
+    },
+    "proximity_alert": true,
+    "speed_kph": 16.67982869834057,
+    "steer": 0.0006220098002813756,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:17:33",
+    "traffic_light_state": "Red",
+    "vehicle_id": "75e559e8",
+    "violation_type": "Red Light Violation"
+  },
+  "-ON4LHnrPqbAnMTu_LEq": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Approaching red light at 17.22 km/h",
+    "heading": -179.67059326171875,
+    "imu": {
+      "accel_x": 0.7958919405937195,
+      "accel_y": -0.014581121504306793,
+      "accel_z": 9.810876846313477,
+      "gyro_x": -0.00003051895328098908,
+      "gyro_y": -0.0006847331533208489,
+      "gyro_z": -0.0002486612065695226
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5320,
+    "location": {
+      "altitude": 0.042580604553222656,
+      "latitude": -0.0012000623706711622,
+      "longitude": -0.00017563622313566862
+    },
+    "proximity_alert": true,
+    "speed_kph": 17.222233359553265,
+    "steer": -0.0002485241857357323,
+    "throttle": 0.4166700839996338,
+    "timestamp": "2025-04-05 15:17:33",
+    "traffic_light_state": "Red",
+    "vehicle_id": "2915a0e4",
+    "violation_type": "Red Light Violation"
+  },
+  "-ON4LK88oGTbofm1EN21": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": 50.10956954956055,
+    "imu": {
+      "accel_x": -0.375759482383728,
+      "accel_y": -0.28619253635406494,
+      "accel_z": 9.81071949005127,
+      "gyro_x": 0.004404609091579914,
+      "gyro_y": 0.0007874739822000265,
+      "gyro_z": -0.1063217967748642
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5320,
+    "location": {
+      "altitude": -0.00343151087872684,
+      "latitude": -0.0010999275486653914,
+      "longitude": -0.0008474863008889979
+    },
+    "proximity_alert": true,
+    "speed_kph": 20.418270338790812,
+    "steer": -0.07780513912439346,
+    "throttle": 0.30818450450897217,
+    "timestamp": "2025-04-05 15:17:43",
+    "traffic_light_state": "None",
+    "vehicle_id": "6de7855a",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LKTHAkS_dfYjGAWW": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": 81.21646118164062,
+    "imu": {
+      "accel_x": -2.455608367919922,
+      "accel_y": -0.07333707809448242,
+      "accel_z": 9.810826301574707,
+      "gyro_x": 0.0025049084797501564,
+      "gyro_y": 0.007205331698060036,
+      "gyro_z": 0.041625574231147766
+    },
+    "lane_type": "Driving",
+    "lidar_points": 4872,
+    "location": {
+      "altitude": -0.0010614775819703937,
+      "latitude": -0.0005036019687167936,
+      "longitude": -0.00102071499081387
+    },
+    "proximity_alert": true,
+    "speed_kph": 21.1858483376441,
+    "steer": -0.03271718695759773,
+    "throttle": 0.1591971069574356,
+    "timestamp": "2025-04-05 15:17:44",
+    "traffic_light_state": "None",
+    "vehicle_id": "f8ca6b2d",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LLwVwDQcAugy6Uyp": {
+    "brake": 1,
+    "collision_partner": "None",
+    "details": "Approaching red light at 12.38 km/h",
+    "heading": -89.6033935546875,
+    "imu": {
+      "accel_x": -5.926275253295898,
+      "accel_y": -0.00978851318359375,
+      "accel_z": 9.83782958984375,
+      "gyro_x": 0.00029373541474342346,
+      "gyro_y": 0.03269039839506149,
+      "gyro_z": -0.0018052355153486133
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5052,
+    "location": {
+      "altitude": -0.005234794691205025,
+      "latitude": 0.000353920609427405,
+      "longitude": -0.00040580511586918704
+    },
+    "proximity_alert": true,
+    "speed_kph": 12.37534673998061,
+    "steer": -0.0011315717129036784,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:17:50",
+    "traffic_light_state": "Red",
+    "vehicle_id": "78799283",
+    "violation_type": "Red Light Violation"
+  },
+  "-ON4LNMUqXDKqyn1ZauU": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": -9.267865180969238,
+    "imu": {
+      "accel_x": 5.981245040893555,
+      "accel_y": -0.4296422302722931,
+      "accel_z": 9.84048080444336,
+      "gyro_x": 0.0011374617461115122,
+      "gyro_y": 0.0028460987377911806,
+      "gyro_z": -0.12493760138750076
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5184,
+    "location": {
+      "altitude": -0.026663416996598244,
+      "latitude": -0.0012630606776156128,
+      "longitude": 0.00019340084445356145
+    },
+    "proximity_alert": true,
+    "speed_kph": 12.862673186558185,
+    "steer": -0.0969410389661789,
+    "throttle": 0.8500000238418579,
+    "timestamp": "2025-04-05 15:17:56",
+    "traffic_light_state": "None",
+    "vehicle_id": "1fdef5a5",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LOfzw-0-lSY8p1Y1": {
+    "brake": 0.14302338659763336,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": -5.946629524230957,
+    "imu": {
+      "accel_x": -1.5079594850540161,
+      "accel_y": 1.3722968101501465,
+      "accel_z": 9.719698905944824,
+      "gyro_x": -0.0553438663482666,
+      "gyro_y": -0.01725265011191368,
+      "gyro_z": 0.11862175166606903
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5496,
+    "location": {
+      "altitude": -0.029537295922636986,
+      "latitude": -0.0012394971724773995,
+      "longitude": 0.0003152086569697121
+    },
+    "proximity_alert": true,
+    "speed_kph": 19.852359570317823,
+    "steer": 0.11000951379537582,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:18:01",
+    "traffic_light_state": "None",
+    "vehicle_id": "1fdef5a5",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LQOLprxbQDpDKtSI": {
+    "brake": 0.51047283411026,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": 59.859317779541016,
+    "imu": {
+      "accel_x": -6.023904800415039,
+      "accel_y": 0.013983011245727539,
+      "accel_z": 9.790898323059082,
+      "gyro_x": -0.0002595493569970131,
+      "gyro_y": 0.024912279099225998,
+      "gyro_z": 0.0025995876640081406
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5012,
+    "location": {
+      "altitude": -0.0012563323834910989,
+      "latitude": -0.0010931224704506803,
+      "longitude": -0.0008617857925812941
+    },
+    "proximity_alert": true,
+    "speed_kph": 18.59531522660994,
+    "steer": 0.0015173139981925488,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:18:08",
+    "traffic_light_state": "None",
+    "vehicle_id": "f8ca6b2d",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LQpC56AowUa1nkcX": {
+    "brake": 1,
+    "collision_partner": "None",
+    "details": "Approaching red light at 8.37 km/h",
+    "heading": -89.60882568359375,
+    "imu": {
+      "accel_x": -5.296240329742432,
+      "accel_y": 0.0009913444519042969,
+      "accel_z": 9.793535232543945,
+      "gyro_x": -0.0000025335466489195824,
+      "gyro_y": 0.0008120926795527339,
+      "gyro_z": -0.000011420973351050634
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5352,
+    "location": {
+      "altitude": 0.1422698199748993,
+      "latitude": -0.00044567998747879756,
+      "longitude": 0.0009524723763433344
+    },
+    "proximity_alert": true,
+    "speed_kph": 8.370913805474885,
+    "steer": 0,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:18:10",
+    "traffic_light_state": "Red",
+    "vehicle_id": "73effb07",
+    "violation_type": "Red Light Violation"
+  },
+  "-ON4LQrtKDtggbWVq2Am": {
+    "brake": 0.699999988079071,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": 79.60140991210938,
+    "imu": {
+      "accel_x": 8.206615447998047,
+      "accel_y": -1.0152745246887207,
+      "accel_z": 9.775830268859863,
+      "gyro_x": 0.0024245725944638252,
+      "gyro_y": -0.009190741926431656,
+      "gyro_z": -0.2604711949825287
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5260,
+    "location": {
+      "altitude": 0.03856773301959038,
+      "latitude": -0.0004276796193920518,
+      "longitude": -0.0010228653768882823
+    },
+    "proximity_alert": true,
+    "speed_kph": 23.052967607344655,
+    "steer": -0.060955509543418884,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:18:10",
+    "traffic_light_state": "None",
+    "vehicle_id": "2306aa25",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LRROAhBgXt-KHSLq": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Vehicle moving opposite to lane direction",
+    "heading": -104.97187042236328,
+    "imu": {
+      "accel_x": 9.528814315795898,
+      "accel_y": -1.2474136352539062,
+      "accel_z": 9.475821495056152,
+      "gyro_x": -0.004304192960262299,
+      "gyro_y": -0.05119047686457634,
+      "gyro_z": -0.15394550561904907
+    },
+    "lane_type": "Driving",
+    "lidar_points": 4980,
+    "location": {
+      "altitude": -0.010075721889734268,
+      "latitude": 0.0005050674400877142,
+      "longitude": -0.0004167260903275726
+    },
+    "proximity_alert": true,
+    "speed_kph": 22.27619507666496,
+    "steer": -0.0598067082464695,
+    "throttle": 0.8500000238418579,
+    "timestamp": "2025-04-05 15:18:13",
+    "traffic_light_state": "None",
+    "vehicle_id": "78799283",
+    "violation_type": "Wrong Way Driving"
+  },
+  "-ON4LWUWiibCguqpH6og": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": -66.98409271240234,
+    "imu": {
+      "accel_x": 1.2713496685028076,
+      "accel_y": 0.14887160062789917,
+      "accel_z": 9.782004356384277,
+      "gyro_x": 0.0027572885155677795,
+      "gyro_y": -0.016256747767329216,
+      "gyro_z": 0.000024831182599882595
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5116,
+    "location": {
+      "altitude": -0.029052866622805595,
+      "latitude": -0.0009342927180000515,
+      "longitude": 0.0009386520884830208
+    },
+    "proximity_alert": true,
+    "speed_kph": 20.369387662297576,
+    "steer": 0.003989649936556816,
+    "throttle": 0.0628897175192833,
+    "timestamp": "2025-04-05 15:18:33",
+    "traffic_light_state": "None",
+    "vehicle_id": "1fdef5a5",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LXeRWarH6ahrVCbU": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": -83.84307098388672,
+    "imu": {
+      "accel_x": 3.322988271713257,
+      "accel_y": -0.4902307987213135,
+      "accel_z": 9.848349571228027,
+      "gyro_x": 0.004010978154838085,
+      "gyro_y": 0.016762640327215195,
+      "gyro_z": -0.1371874362230301
+    },
+    "lane_type": "Driving",
+    "lidar_points": 4888,
+    "location": {
+      "altitude": -0.028898771852254868,
+      "latitude": -0.0008088403485828621,
+      "longitude": 0.0009766956091763297
+    },
+    "proximity_alert": true,
+    "speed_kph": 20.461220882933112,
+    "steer": -0.034353308379650116,
+    "throttle": 0.290367990732193,
+    "timestamp": "2025-04-05 15:18:38",
+    "traffic_light_state": "None",
+    "vehicle_id": "1fdef5a5",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LYyjgF7qfaWxbAJC": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": -12.056262016296387,
+    "imu": {
+      "accel_x": 0.1503545343875885,
+      "accel_y": -0.32851454615592957,
+      "accel_z": 9.80782699584961,
+      "gyro_x": 0.004110957030206919,
+      "gyro_y": 0.00018302466196473688,
+      "gyro_z": -0.1171162873506546
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5412,
+    "location": {
+      "altitude": -0.003442039480432868,
+      "latitude": -0.0012232438560175751,
+      "longitude": 0.0006698408073382496
+    },
+    "proximity_alert": true,
+    "speed_kph": 20.596178491673395,
+    "steer": -0.0863947793841362,
+    "throttle": 0.19677580893039703,
+    "timestamp": "2025-04-05 15:18:43",
+    "traffic_light_state": "None",
+    "vehicle_id": "6de7855a",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LZi79ZEjRFVmzn6v": {
+    "brake": 1,
+    "collision_partner": "None",
+    "details": "Approaching red light at 12.20 km/h",
+    "heading": -89.5675048828125,
+    "imu": {
+      "accel_x": -5.971685886383057,
+      "accel_y": -0.011932849884033203,
+      "accel_z": 9.813075065612793,
+      "gyro_x": -0.000013149343430995941,
+      "gyro_y": 0.00215527624823153,
+      "gyro_z": 0.006229651626199484
+    },
+    "lane_type": "Driving",
+    "lidar_points": 4852,
+    "location": {
+      "altitude": -0.00522830942645669,
+      "latitude": 0.0003465860904867668,
+      "longitude": -0.00037440078196219296
+    },
+    "proximity_alert": true,
+    "speed_kph": 12.200800551475586,
+    "steer": 0,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:18:47",
+    "traffic_light_state": "Red",
+    "vehicle_id": "dbed4a7a",
+    "violation_type": "Red Light Violation"
+  },
+  "-ON4Lb-7pU6PfAOz8wWb": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": 175.66122436523438,
+    "imu": {
+      "accel_x": 0.18520158529281616,
+      "accel_y": 0.4911900758743286,
+      "accel_z": 9.808923721313477,
+      "gyro_x": -0.005512962117791176,
+      "gyro_y": -0.0005342147778719664,
+      "gyro_z": 0.1587846875190735
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5372,
+    "location": {
+      "altitude": -0.0034568405244499445,
+      "latitude": -0.00012050657055340253,
+      "longitude": 0.0007476944331031833
+    },
+    "proximity_alert": true,
+    "speed_kph": 19.882829224625517,
+    "steer": 0.10260195285081863,
+    "throttle": 0.6928941607475281,
+    "timestamp": "2025-04-05 15:18:56",
+    "traffic_light_state": "None",
+    "vehicle_id": "a94021fd",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LbFfUcRNIPwAJoCk": {
+    "brake": 1,
+    "collision_partner": "None",
+    "details": "Approaching red light at 14.43 km/h",
+    "heading": -89.39702606201172,
+    "imu": {
+      "accel_x": -6.783024311065674,
+      "accel_y": 0.0030813217163085938,
+      "accel_z": 9.761651039123535,
+      "gyro_x": 0.000005389563739299774,
+      "gyro_y": 0.015769382938742638,
+      "gyro_z": -0.0009164178045466542
+    },
+    "lane_type": "Driving",
+    "lidar_points": 4864,
+    "location": {
+      "altitude": 0.013207892887294292,
+      "latitude": -0.00045549146662438034,
+      "longitude": -0.0009325188003073727
+    },
+    "proximity_alert": true,
+    "speed_kph": 14.431805237876173,
+    "steer": 0,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:18:57",
+    "traffic_light_state": "Red",
+    "vehicle_id": "75e559e8",
+    "violation_type": "Red Light Violation"
+  },
+  "-ON4LbYXvvja_0l0no9J": {
+    "brake": 1,
+    "collision_partner": "None",
+    "details": "Approaching red light at 17.06 km/h",
+    "heading": -89.427978515625,
+    "imu": {
+      "accel_x": 0.5225315690040588,
+      "accel_y": 0.014814972877502441,
+      "accel_z": 9.809367179870605,
+      "gyro_x": 0.00003977210144512355,
+      "gyro_y": -0.00048217910807579756,
+      "gyro_z": 0.0010856263106688857
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5032,
+    "location": {
+      "altitude": 0.04261920973658562,
+      "latitude": -0.00047449592162251975,
+      "longitude": -0.0009641359728156571
+    },
+    "proximity_alert": true,
+    "speed_kph": 17.063195264338628,
+    "steer": 0.0006948008667677641,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:18:58",
+    "traffic_light_state": "Red",
+    "vehicle_id": "2915a0e4",
+    "violation_type": "Red Light Violation"
+  },
+  "-ON4Lculgaj9FpN6POOk": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": 177.67884826660156,
+    "imu": {
+      "accel_x": -0.3557524085044861,
+      "accel_y": 0.8557329177856445,
+      "accel_z": 9.81154727935791,
+      "gyro_x": 0.0050804633647203445,
+      "gyro_y": 0.0010042206849902868,
+      "gyro_z": 0.0747535228729248
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5560,
+    "location": {
+      "altitude": -0.0034239578526467085,
+      "latitude": -0.00015012523280688583,
+      "longitude": 0.0005541112999779805
+    },
+    "proximity_alert": true,
+    "speed_kph": 19.7759174350326,
+    "steer": 0.043991945683956146,
+    "throttle": 0.7851380109786987,
+    "timestamp": "2025-04-05 15:19:04",
+    "traffic_light_state": "None",
+    "vehicle_id": "a94021fd",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4LdTWigSNWtqZyk00": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": -89.10494232177734,
+    "imu": {
+      "accel_x": -0.6315097212791443,
+      "accel_y": -0.0756426453590393,
+      "accel_z": 9.815107345581055,
+      "gyro_x": -0.00011084778816439211,
+      "gyro_y": -0.0001387907104799524,
+      "gyro_z": -0.004735676106065512
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5668,
+    "location": {
+      "altitude": -0.00344333634711802,
+      "latitude": -0.0007419387783613729,
+      "longitude": 0.0009502801147624376
+    },
+    "proximity_alert": true,
+    "speed_kph": 20.497369889148764,
+    "steer": -0.006094718351960182,
+    "throttle": 0.20780116319656372,
+    "timestamp": "2025-04-05 15:19:06",
+    "traffic_light_state": "None",
+    "vehicle_id": "6de7855a",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4Lh98D_80FaKiVn9G": {
+    "brake": 0.5240084528923035,
+    "collision_partner": "None",
+    "details": "Vehicle moving opposite to lane direction",
+    "heading": -120.2642822265625,
+    "imu": {
+      "accel_x": 3.2738966941833496,
+      "accel_y": -1.5991590023040771,
+      "accel_z": 9.799844741821289,
+      "gyro_x": -0.01813940331339836,
+      "gyro_y": -0.011467520147562027,
+      "gyro_z": -0.36439359188079834
+    },
+    "lane_type": "Driving",
+    "lidar_points": 4988,
+    "location": {
+      "altitude": -0.00006797794048907235,
+      "latitude": -0.00022167551540519526,
+      "longitude": 0.0009239527576666132
+    },
+    "proximity_alert": true,
+    "speed_kph": 21.008544016853907,
+    "steer": -0.09661869704723358,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:19:21",
+    "traffic_light_state": "None",
+    "vehicle_id": "aa86f790",
+    "violation_type": "Wrong Way Driving"
+  },
+  "-ON4LjiZZ9NDpiGNCQwe": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": 79.33089447021484,
+    "imu": {
+      "accel_x": 1.3361752033233643,
+      "accel_y": -0.4813680052757263,
+      "accel_z": 9.84337329864502,
+      "gyro_x": 0.016438312828540802,
+      "gyro_y": -0.005111490376293659,
+      "gyro_z": -0.08619648963212967
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5324,
+    "location": {
+      "altitude": -0.007866935804486275,
+      "latitude": -0.0004293570041369321,
+      "longitude": -0.001021712189863548
+    },
+    "proximity_alert": true,
+    "speed_kph": 20.285418542242887,
+    "steer": -0.04165862500667572,
+    "throttle": 0.4178655445575714,
+    "timestamp": "2025-04-05 15:19:32",
+    "traffic_light_state": "None",
+    "vehicle_id": "78799283",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4Lk3RVosxmv1zY91p": {
+    "brake": 1,
+    "collision_partner": "None",
+    "details": "Approaching red light at 14.27 km/h",
+    "heading": -179.86505126953125,
+    "imu": {
+      "accel_x": -1.50587797164917,
+      "accel_y": 0.007197589613497257,
+      "accel_z": 9.796843528747559,
+      "gyro_x": 0.00001474093551223632,
+      "gyro_y": 0.0031226039864122868,
+      "gyro_z": 0.0005711507401429117
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5700,
+    "location": {
+      "altitude": -0.0029465865809470415,
+      "latitude": -0.00014938257652374887,
+      "longitude": -0.00018042180193587833
+    },
+    "proximity_alert": true,
+    "speed_kph": 14.273493115975274,
+    "steer": 0.0006948008667677641,
+    "throttle": 0,
+    "timestamp": "2025-04-05 15:19:33",
+    "traffic_light_state": "Red",
+    "vehicle_id": "a94021fd",
+    "violation_type": "Red Light Violation"
+  },
+  "-ON4LmmMkc0r4u4YSZ3U": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": -92.94379425048828,
+    "imu": {
+      "accel_x": -0.07417888939380646,
+      "accel_y": -0.24172018468379974,
+      "accel_z": 9.809195518493652,
+      "gyro_x": 0.003105063922703266,
+      "gyro_y": 0.0008462253026664257,
+      "gyro_z": -0.0486307293176651
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5524,
+    "location": {
+      "altitude": -0.003442420857027173,
+      "latitude": 0.00023627891293642733,
+      "longitude": 0.0009538100623262632
+    },
+    "proximity_alert": true,
+    "speed_kph": 20.644407951959767,
+    "steer": -0.1185736283659935,
+    "throttle": 0.3277639150619507,
+    "timestamp": "2025-04-05 15:19:44",
+    "traffic_light_state": "None",
+    "vehicle_id": "6de7855a",
+    "violation_type": "Lane Violation"
+  },
+  "-ON4Lnk21snxwMl_dLQ-": {
+    "brake": 0,
+    "collision_partner": "None",
+    "details": "Crossed lane markings",
+    "heading": -138.85792541503906,
+    "imu": {
+      "accel_x": 2.010876178741455,
+      "accel_y": -5.964697360992432,
+      "accel_z": 10.078185081481934,
+      "gyro_x": 0.04748256504535675,
+      "gyro_y": -0.004380375146865845,
+      "gyro_z": -0.7591639757156372
+    },
+    "lane_type": "Driving",
+    "lidar_points": 5488,
+    "location": {
+      "altitude": -0.028435954824090004,
+      "latitude": 0.0004798610580962759,
+      "longitude": 0.000876224755068511
+    },
+    "proximity_alert": true,
+    "speed_kph": 19.97726974579528,
+    "steer": -0.37814193964004517,
+    "throttle": 0.693031370639801,
+    "timestamp": "2025-04-05 15:19:48",
+    "traffic_light_state": "None",
+    "vehicle_id": "1fdef5a5",
+    "violation_type": "Lane Violation"
+  }
+}

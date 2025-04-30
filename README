@@ -1,9 +1,10 @@
-# CARLA Traffic Violation Detection & Analytics System
+# CARLA Traffic Violation Detection & Cloud Analytics System
 
 ![CARLA Simulation Dashboard](https://carla.org/img/hero.jpg)
 
 ## Table of Contents
 - [System Overview](#system-overview)
+- [Version Compatibility](#version-compatibility)
 - [Key Features](#key-features)
 - [Technical Architecture](#technical-architecture)
 - [Installation Guide](#installation-guide)
@@ -16,225 +17,173 @@
 
 ## System Overview
 
-This advanced traffic monitoring system combines CARLA's realistic vehicle simulation with real-time violation detection and cloud analytics. The script generates both labelled and unlabelled dataset. The script is available in the location `cd ./pythonapi/examples`. Rather than generating a scenario and wasting energy integrating it run this script file to generate violations in your Carla simulation. The solution:
+This project delivers a high-fidelity traffic violation detection system by integrating the CARLA simulator with cloud-based real-time analytics using Firebase. The system simulates urban traffic with autonomous vehicles, monitors behavior using mounted sensors, detects violations, logs telemetry data locally, and streams structured violation events to a Firebase dashboard.
 
-1. Simulates complex urban traffic scenarios with 20+ autonomous vehicles
-2. Detects 8 types of traffic violations using integrated sensors
-3. Logs comprehensive telemetry data to CSV files
-4. Streams violation events to Firebase for real-time monitoring
-5. Prepares structured datasets for machine learning applications
+**Script Entry Point**: `./PythonAPI/examples/traffic_violation_detection.py`
+
+## Version Compatibility
+
+- ✅ **Tested with**: CARLA 0.9.15 to 0.9.15.2
+- ⚠️ **Incompatible with**: CARLA 0.10.0+ (due to major API changes)
+
+### Recommended Setup:
+- **CARLA**: 0.9.15.2
+- **Python**: 3.7.x
+- **OS**: Windows or Ubuntu 20.04+
 
 ## Key Features
 
 ### Core Detection Capabilities
-- **Speeding** monitoring with configurable speed limits
-- **Traffic signal violations** (red light running)
-- **Wrong-way driving** detection
-- **Illegal overtaking** identification
-- **Collision detection** with severity classification
-- **Lane discipline violations**
+- **Speeding**: Detects vehicles exceeding speed limits
+- **Red Light Violations**: Captures movement through red signals
+- **Wrong-Way Driving**: Detects reverse lane travel
+- **Lane Violations**: Identifies improper lane changes
+- **Collision Detection**: Logs vehicle/object collisions with intensity
+- **Real-Time Alerts**: Outputs events instantly via Firebase
+
+### Sensor Suite per Vehicle
+- LiDAR, IMU, GNSS, Collision Detector, Lane Invasion Sensor
 
 ### Data Pipeline
-- Real-time CSV logging with timestamped events
-- Vehicle telemetry capture (speed, position, acceleration)
-- Sensor fusion (LiDAR, cameras, IMU)
-- Firebase Cloud Firestore integration
-- Automated dataset preparation for ML
-
-### Simulation Control
-- Dynamic vehicle spawning/destruction
-- Scenario Runner integration
-- Custom traffic behavior scripting
-- Multi-town support (Town01-Town10)
-
-## Technical Architecture
-
 ```mermaid
-graph TD
-    A[CARLA Simulator] --> B[Python API]
-    B --> C[Violation Detection Engine]
-    C --> D[Local CSV Storage]
-    C --> E[Firebase Cloud]
-    D --> F[ML Dataset Preparation]
-    E --> G[Real-time Dashboard]
+flowchart LR
+    S[Sensors] --> V[Violation Detector]
+    V --> C[CSV Logger]
+    V --> F[Firebase Uploader]
+    C --> M[ML Dataset Builder]
+    F --> D[Realtime Firebase Dashboard]
 ```
 
 ## Installation Guide
 
-### Prerequisites
-- Windows 10/11 (64-bit)
-- NVIDIA GPU (6GB+ VRAM recommended)
-- Python 3.7.9
-- CARLA 0.9.15 WindowsNoEditor
-- DirectX 11 Runtime
+### 1. Clone CARLA Repository
 
-### Step-by-Step Setup
+```bash
+# Clone full CARLA source
+git clone https://github.com/carla-simulator/carla.git
+cd carla
 
-1. **Install CARLA**
-   ```powershell
-   # Download and extract CARLA
-   mkdir C:\CARLA
-   Expand-Archive CARLA_0.9.15.zip -DestinationPath C:\CARLA
-   ```
+# Checkout compatible version
+git checkout 0.9.15.2
+```
 
-2. **Configure Python Environment**
-   ```cmd
-   python -m venv carla_env
-   carla_env\Scripts\activate
-   pip install -r requirements.txt
-   ```
+### 2. Download CARLA Precompiled Binaries (Recommended)
 
-3. **Set Environment Paths**
-   ```cmd
-   set PYTHONPATH=%PYTHONPATH%;C:\CARLA\PythonAPI\carla
-   set PYTHONPATH=%PYTHONPATH%;C:\scenario_runner
-   ```
+```bash
+# Windows
+wget https://carla-releases.s3.eu-west-3.amazonaws.com/Windows/CARLA_0.9.15.2.zip
+Expand-Archive CARLA_0.9.15.2.zip -DestinationPath C:\CARLA
+
+# Linux
+wget https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.15.2.tar.gz
+tar -xvzf CARLA_0.9.15.2.tar.gz -C ~/carla
+```
+
+### 3. Set Up Python Virtual Environment
+
+```bash
+# Python 3.7 is required
+python3.7 -m venv carla_env
+
+# Activate virtual environment
+source carla_env/bin/activate     # Linux
+carla_env\Scripts\activate        # Windows
+
+# Install required packages
+pip install -r requirements.txt
+```
+
+### 4. Configure Python Path for CARLA & ScenarioRunner
+
+```bash
+# Windows
+set PYTHONPATH=%PYTHONPATH%;C:\CARLA\PythonAPI\carla
+set PYTHONPATH=%PYTHONPATH%;C:\scenario_runner
+
+# Linux
+export PYTHONPATH=$PYTHONPATH:~/carla/PythonAPI/carla
+export PYTHONPATH=$PYTHONPATH:~/scenario_runner
+```
 
 ## Configuration
 
-### Simulation Parameters
-Edit `config.ini` to customize:
-```ini
-[simulation]
-town = Town01
-vehicles = 20
-duration = 30  # minutes
-quality = Low
-
-[violations]
-speed_limit = 60  # km/h
-min_collision_force = 500  # N
-```
-
-### Sensor Configuration
-Modify `sensors.json` to adjust:
-```json
-{
-  "camera": {
-    "fov": 90,
-    "resolution": "1280x720"
-  },
-  "lidar": {
-    "channels": 32,
-    "range": 5000
-  }
-}
-```
+- Ensure `traffic_violation_detection.py` is placed in `CARLA/PythonAPI/examples`
+- Add Firebase credentials to: `config/firebase.json`
+- Modify detection thresholds or sensor configurations within the script if needed
 
 ## Usage
 
-### Starting the System
+### 1. Launch CARLA Server
+```bash
+# Linux
+./CarlaUE4.sh -quality-level=Low
 
-1. **Launch CARLA Server**
-   ```cmd
-   CarlaUE4.exe -dx11 -quality-level=Low -world-port=2000
-   ```
+# Windows
+CarlaUE4.exe -dx11 -quality-level=Low
+```
 
-2. **Run Detection System**
-   ```cmd
-   python traffic_detection.py --config config.ini
-   ```
-
-3. **Monitor Output**
-   ```
-   🚨 [14:40:51] Vehicle #5486081b - Illegal Overtaking (72.4 km/h)
-   📊 [14:40:51] Event logged to Firebase (collision_path/violations)
-   ```
-
-### Command Reference
-| Command | Description |
-|---------|-------------|
-| `--town` | Select CARLA map (Town01-Town10) |
-| `--vehicles` | Number of NPC vehicles (10-50) |
-| `--firebase` | Enable cloud logging (true/false) |
-| `--headless` | Run without rendering |
+### 2. Start Violation Detection Script
+```bash
+python PythonAPI/examples/traffic_violation_detection.py \
+    --town Town03 \
+    --vehicles 25 \
+    --duration 60
+```
 
 ## Firebase Integration
 
-### Setup
-1. Create Firebase project
-2. Download service account JSON
-3. Place at `config/firebase-creds.json`
+Firebase enables real-time visualization and logging of traffic violations across connected systems.
 
-### Data Structure
-```javascript
-{
-  "violations": {
-    "vehicleId": "5486081b",
-    "timestamp": "2025-02-16T14:40:51Z",
-    "type": "Illegal_Overtaking",
-    "location": { "x": 124.56, "y": -45.78 },
-    "telemetry": {
-      "speed": 72.4,
-      "acceleration": 2.1
-    }
-  }
-}
-```
+### Setup Instructions:
+1. Create a Firebase project at [firebase.google.com](https://firebase.google.com)
+2. Enable Realtime Database (not Firestore)
+3. Download your service account credentials (`.json`) and save it as:
+   ```
+   config/firebase.json
+   ```
+4. The system will automatically upload each violation to Firebase
 
-### Real-time Dashboard
-Access violations at:
-`https://carla-4f285-default-rtdb.firebaseio.com/`
+### Logged Fields:
+- `vehicle_id`, `timestamp`, `violation_type`, `GPS`, `speed`, `IMU`, `LiDAR point count`, `collision partner`, etc.
+
+### Example Dashboard:
+Firebase Console → Realtime Database:  
+`https://console.firebase.google.com/project/YOUR_PROJECT_ID/database`
 
 ## Data Analytics
 
-### CSV Structure
-| Column | Type | Description |
-|--------|------|-------------|
-| timestamp | DateTime | Event time (UTC) |
-| vehicle_id | String | CARLA vehicle ID |
-| violation_type | Enum | Violation category |
-| speed | Float | km/h at time of event |
-| location | GeoPoint | X,Y coordinates |
-| sensor_data | JSON | Raw sensor payload |
-
-### Example Analysis
-```python
-import pandas as pd
-
-df = pd.read_csv('violations.csv')
-print(df.groupby('violation_type')['speed'].describe())
-
-# Output:
-#               count   mean    std    min    25%    50%    75%    max
-# violation_type                                                      
-# Illegal_Overtaking   42  68.42  12.31  45.10  59.25  67.80  76.55  89.30
-# Wrong_Way_Driving    18  55.67   9.87  32.45  49.10  56.20  62.15  73.80
-```
+- All violation events are also logged to `traffic_violations_detailed.csv`
+- The CSV includes structured sensor and control data for machine learning
+- Sample columns:
+    - Timestamp, Vehicle ID, Speed, Throttle, Violation Type, GPS, IMU, LiDAR
+- Data can be used for:
+    - Violation pattern analysis
+    - Autonomous model training (classification, anomaly detection)
 
 ## Troubleshooting
 
-### Common Issues
-1. **Python Version Mismatch**
-   ```
-   Error: CARLA requires Python 3.7.x
-   Solution: py -3.7 -m venv carla_env
-   ```
+- **CARLA Not Starting**:
+    - Ensure DirectX 11 (Windows) or Vulkan (Linux) is installed
+    - Use compatible GPU and drivers
 
-2. **Port Conflicts**
-   ```cmd
-   netstat -ano | findstr 2000
-   taskkill /PID <pid> /F
-   ```
+- **Python Errors**:
+    - Use Python 3.7 only
+    - Activate the virtual environment before running scripts
 
-3. **Firebase Connection**
-   ```
-   Error: 403 Permission denied
-   Solution: Regenerate service account JSON
-   ```
+- **Firebase Not Logging**:
+    - Check that the `.json` file path is correct and has permissions
+    - Verify Firebase project database rules allow write access
 
 ## License
 
-MIT License
-
-Copyright (c) 2025 @aswathiir
-
-Permission is hereby granted... [standard MIT license text]
+MIT License © 2025 [@aswathiir](https://github.com/aswathiir)
 
 ---
 
-**System Requirements**  
-![Windows](https://img.shields.io/badge/Windows-10%2B-blue)  
-![Python](https://img.shields.io/badge/Python-3.7.9-green)  
-![CARLA](https://img.shields.io/badge/CARLA-0.9.15-orange)  
-![Firebase](https://img.shields.io/badge/Firebase-9.22.0-yellow)
+**Version Badges**  
+![CARLA](https://img.shields.io/badge/CARLA-0.9.15.2-blue)  
+![Python](https://img.shields.io/badge/Python-3.7-green)  
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
+
+**Note**: This project focuses on the Python API components only. The CARLA simulator itself should be downloaded separately from [carla.org](https://carla.org).
+

@@ -1,6 +1,6 @@
 # CARLA Traffic Violation Detection and Cloud Analytics System
 
-![CARLA Simulation Dashboard](Screenshot 2025-04-14 182923.png)
+![CARLA Simulation Dashboard](https://github.com/aswathiir/carla-trafficgenerator/blob/main/Screenshot%202025-04-14%20182923.png)
 
 ## Table of Contents
 - [System Overview](#system-overview)
@@ -165,7 +165,7 @@ Firebase enables real-time visualization and storage of violations.
 - `vehicle_id`, `timestamp`, `violation_type`, `GPS`, `speed`, `IMU`, `LiDAR`, `collision_partner`, etc.
 
 📊 **Firebase Console**:  
-Visit [Firebase Realtime Database Console](https://console.firebase.google.com/project/YOUR_PROJECT_ID/database)
+Visit [Firebase Realtime Database Console](https://carla-4f285-default-rtdb.firebaseio.com/)
 
 ---
 
